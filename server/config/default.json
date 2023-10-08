@@ -1,0 +1,7 @@
+{
+  "elastic": {
+    "nodeURL": "http://localhost:9200",
+    "username": "raz",
+    "password": "frihet13"
+  }
+}

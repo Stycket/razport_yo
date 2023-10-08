@@ -1,0 +1,7 @@
+{
+  "elastic": {
+    "nodeURL": "http://localhost:9200", // Change the URL to match your local Elasticsearch configuration
+    "username": "raz", // If your local Elasticsearch does not require authentication, set these to null
+    "password": "frihet13"
+  }
+}
