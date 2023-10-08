@@ -799,37 +799,37 @@ $(document).ready(function() {
   // Define an array of data for the menu items
   var menuData = [
     {
-      imageSrc: '/images/projectz_imagez/dragonpathy0.png',
+      imageSrc: 'https://olivprodukter.se/raz_projectz/stuff/razport/client/projectz_imagez/dragonpathy0.png',
       title: 'Dragonpath',
       paragraph: 'Ett RPG spel gjort med openai. Låt servern ladda klart vid varje klick, inte fixat laddningsanimation än.',
       link: 'https://dragonpath-doz.vercel.app/',
     },
     {
-      imageSrc: 'images/projectz_imagez/bastuklubben.png',
+      imageSrc: 'https://olivprodukter.se/raz_projectz/stuff/razport/client/projectz_imagez/bastuklubben.png',
       title: 'Bastu Bokningssystem',
       paragraph: 'Bastuföreningen i bygden behövde en bokningsserver, bygger denna just nu. Låt servern starta tar några sekunder. Demo konto: bastuexempel@gmail.com | password',
       link: 'https://bastu.webflow.io',
     },
     {
-      imageSrc: 'images/projectz_imagez/oliver.png',
+      imageSrc: 'https://olivprodukter.se/raz_projectz/stuff/razport/client/projectz_imagez/oliver.png',
       title: 'Olivprodukter',
       paragraph: 'Lokalföretagare som ville ha en statisk hemsida. Byggde dock swishbetalnings system för beställningar också. Ni kan pröva boka, med ett stochkolms postnr, då endast gbg postnr funkar.',
       link: 'https://www.olivprodukter.se',
     },
     {
-      imageSrc: 'images/projectz_imagez/noteplus.png',
+      imageSrc: 'https://olivprodukter.se/raz_projectz/stuff/razport/client/projectz_imagez/noteplus.png',
       title: 'Note Deluxe',
       paragraph: 'Trött på o bli bländad när man sitter och skriver poesi på nätterna. Under konstruktion.',
       link: 'https://codepen.io/rasmus-p-lundin/full/bGOQPjB',
     },
     {
-      imageSrc: 'images/projectz_imagez/searchzone.png',
+      imageSrc: 'https://olivprodukter.se/raz_projectz/stuff/razport/client/projectz_imagez/searchzone.png',
       title: 'Wikilux (SearchZone) Beta 0.55',
       paragraph: 'Bara den översta raden av keywordzen funkar än så länge.',
       link: 'https://codepen.io/rasmus-p-lundin/full/eYbQwQr',
     },
     {
-      imageSrc: 'images/projectz_imagez/trackerzone.png',
+      imageSrc: 'https://olivprodukter.se/raz_projectz/stuff/razport/client/projectz_imagez/trackerzone.png',
       title: 'Tracker Zone',
       paragraph: 'Litet projekt jag byggde. Ska finputsa och vidareutveckla i sinom tid.',
       link: 'https://codepen.io/rasmus-p-lundin/full/ZEVmdmx',
@@ -855,6 +855,17 @@ $(document).ready(function() {
   ];
 
 
+
+  // Preload images
+      function preloadImages() {
+        for (var i = 0; i < menuData.length; i++) {
+          var image = new Image();
+          image.src = menuData[i].imageSrc;
+        }
+      }
+
+      preloadImages();
+    
 
   // Handle menu item click
   $('.menu-item').click(function() {
